@@ -2,18 +2,17 @@ import React from 'react';
 
 import Counter from './Counter';
 import TodoList from './TodoList';
+import TodoInput from './TodoInput';
 
 export default ()=>(
     <div>
         <h1>
-            Things I Have To Do
+            Ye Olde Checklist
         </h1>
-        <h2>
-            I don't want to do them, but they need to get done.
-        </h2>
         <div>
             <Counter />
             <TodoList />
+            <TodoInput />
         </div>
     </div>
 )

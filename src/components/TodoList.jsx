@@ -2,11 +2,11 @@ import React from 'react';
 import { mutations } from '../store';
 import { connect } from 'react-redux';
 
-const TodoListItem = ({name,done,id,onChange})=>(
+const TodoListItem = ({name,complete,id,onChange})=>(
     <li>
         {name} {console.log(onChange)}
         {
-            done ?
+            complete ?
                 <span>DONE</span>:
                 <button onClick={()=>onChange(id)}>DO</button>
 
@@ -24,10 +24,10 @@ const TodoList = ({todos,onChange})=>(
     </ul>
 );
 
-const mapStateToProps = ({showDone,todos})=>{
-    const filteredTodos = todos.filter(todo=>todo.done);
+const mapStateToProps = ({showComplete,todos})=>{
+    const filteredTodos = todos.filter(todo=>todo.complete);
     return {
-        todos: showDone ? todos : filteredTodos
+        todos: showComplete ? todos : filteredTodos
     }
 };
 
