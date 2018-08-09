@@ -3,6 +3,7 @@ import React from 'react';
 import Counter from './Counter';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
+import ShowCompleteToggle from './ShowCompleteToggle';
 
 export default ()=>(
     <div>
@@ -13,6 +14,7 @@ export default ()=>(
             <Counter />
             <TodoList />
             <TodoInput />
+            <ShowCompleteToggle />
         </div>
     </div>
 )

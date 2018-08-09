@@ -7,7 +7,7 @@ const TodoListItem = ({name,complete,id,onChange})=>(
         {name} {console.log(onChange)}
         {
             complete ?
-                <span>DONE</span>:
+                <span><button disabled>DONE</button></span>:
                 <button onClick={()=>onChange(id)}>DO</button>
 
         }
